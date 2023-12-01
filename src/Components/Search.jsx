@@ -33,6 +33,8 @@ const Search = () => {
   };
 
   const handleSelect = async () => {
+    // dispatch({type:"CHANGE_USER", payload: u})
+
     const combinedId = 
       currentUser.uid > user.uid 
       ? currentUser.uid + user.uid 
