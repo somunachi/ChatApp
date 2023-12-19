@@ -9,12 +9,12 @@ import { getStorage} from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDBMnqTsvOIpz2ZrrCSAjbN1OaBU8nHtAk",
-  authDomain: "cocochat-84865.firebaseapp.com",
-  projectId: "cocochat-84865",
-  storageBucket: "cocochat-84865.appspot.com",
-  messagingSenderId: "806055311852",
-  appId: "1:806055311852:web:06e0b305505cebdb47a8c9"
+  apiKey: "AIzaSyBqS4p5OB-XTKwrbQDebUqRj8bdTLDQ690",
+  authDomain: "celebchat-bf903.firebaseapp.com",
+  projectId: "celebchat-bf903",
+  storageBucket: "celebchat-bf903.appspot.com",
+  messagingSenderId: "186733332449",
+  appId: "1:186733332449:web:880b9041ead624f5d574a0"
 };
 
 // Initialize Firebase

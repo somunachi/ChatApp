@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./style.scss";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
-import { AuthContextProvider } from "./context/AuthContext";
+// import { AuthContextProvider } from "./context/AuthContext";
 
 function App() {
 
