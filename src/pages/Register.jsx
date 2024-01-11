@@ -5,10 +5,13 @@ import {auth, db, storage} from '../firebase';
 import {ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore"; 
 import { useNavigate, Link } from 'react-router-dom';
+import { EyeSlash } from "react-bootstrap-icons";
+import { Eye } from "react-bootstrap-icons";
 
 
 const Register = () => {
   const [error, setError] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   
   const handleSubmit = async (e) => {
@@ -60,6 +63,12 @@ const Register = () => {
     };
 
  
+    const revealPwd = () => {
+      setShowPassword(!showPassword)
+    
+    };
+
+
   return (
     <div className='formContainer'>
       <div className="logo">CoCo Chat</div>
@@ -69,7 +78,13 @@ const Register = () => {
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder='Display name' id='displayName'/>
                 <input type="email" name="" id="userEmail" placeholder='Email'/>
-                <input type="password" autoComplete='off' name="" id="userPwd" placeholder='Password' />
+                <div className="pwd">
+                <input type={showPassword ? "text" : "password"} autoComplete='off' name="" id="userPwd" placeholder='Password' />
+                  <div className="eyeicon">
+                  {showPassword ? <Eye onClick={revealPwd}/> : <EyeSlash onClick={revealPwd}/>}
+                  </div>
+                </div>
+
                 <input style={{display: "none"}} type="file" name="" id="file" />
                 <label htmlFor="file">
                   <img src={addPhoto} alt="" className='addPhoto' />
@@ -78,7 +93,7 @@ const Register = () => {
                 <button>Sign up</button>
                 {error && <span>Something went wrong</span>}
             </form>
-            <p>Already registered? <Link to="/login"> Log in</Link></p>
+            <p>Already registered? <Link className='linkto' to="/login"> Log in</Link></p>
         </div>
     </div>
   )

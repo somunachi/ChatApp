@@ -30,6 +30,15 @@
             flex-direction: column;
             gap: 15px;
            
+           .pwd{
+            display: flex;
+            align-items: center;
+            .eyeicon{
+                position: absolute;
+                z-index: 1;
+                margin-left: 250px;
+            }
+           }
 
             button{
                 background-color: rgb(0, 180, 63);
@@ -57,6 +66,10 @@
         }
          p{
             font-size: 12px;
+
+            .linkto{
+                color: white;
+            }
          }
 
       
